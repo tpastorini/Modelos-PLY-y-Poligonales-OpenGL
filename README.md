@@ -17,19 +17,14 @@ Modificaciones:
 1. En el fichero objetos.cc añadimos tres opciones 'case' más. Una es para cargar el fichero PLY según una ruta completa que le demos, la siguiente es para, dado un fichero PLY, poder realizar la revolución en base al eje Y de los puntos del perfil de ese fichero. El fichero objetos.h quedaría con el método como sigue:
 
 Objeto3D::Objeto3D(int obj){
-	switch(obj){
-		case 1:
-			CrearPiramide(1);
-			break;
-		case 2:
-			CrearCubo(1);
-			break;
-		case 3:
-			CrearObjetoConPLY("/media/tatiana/DATA/IG/Prácticas/practica2/read_ply/ant.ply");	// Cargo el ply correspondiente a la hormiga
-			break;
-		case 4:
-			CrearObjetoConPLY("/media/tatiana/DATA/IG/Prácticas/practica2/read_ply/perfil_st.ply");
-			Revolucion(50);
-			break;
-	}
-}
+   switch(obj){
+      case 1:
+         break;
+      case 2:
+         break;
+      case 3:
+         break;
+      case 4:
+         break;
+      case 5:
+         break;
