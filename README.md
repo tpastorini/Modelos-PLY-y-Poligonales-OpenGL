@@ -10,21 +10,14 @@ El perfil a modelar escogido es el de un peón de ajedrez y se hará el modelado
 
 El modelo ply escogido será el ant.ply, vértices que formar como objeto una hormiga en 3D.
 
-Partiendo de la base presentada en https://github.com/tpastorini/Modelado-Sencillo-3D---OpenGL , añadiremos lo necesario para este proyecto sin tener duplicados. Estos ficheros se pueden añadir a la implementación que contiene el enlace anteriormente citado sin problemas.
+Partiendo de la base presentada en https://github.com/tpastorini/Modelado-Sencillo-3D---OpenGL , añadiremos lo necesario para este proyecto. El contenido de estos ficheros se pueden añadir a la implementación que contiene el enlace anteriormente citado sin problemas, simplemente copiando su contenido donde corresponda en los ficheros anteriores.
 
 Modificaciones:
 
-1. En el fichero objetos.cc añadimos tres opciones 'case' más. Una es para cargar el fichero PLY según una ruta completa que le demos, la siguiente es para, dado un fichero PLY, poder realizar la revolución en base al eje Y de los puntos del perfil de ese fichero. El fichero objetos.h quedaría con el método como sigue:
+1. En el fichero objetos.cc añadimos tres opciones 'case' más al contructor por parámetros. Una es para cargar el fichero PLY según una ruta completa que le demos, la siguiente es para, dado un fichero PLY, poder realizar la revolución en base al eje Y de los puntos del perfil de ese fichero.
 
-Objeto3D::Objeto3D(int obj){
-   switch(obj){
-      case 1:
-         break;
-      case 2:
-         break;
-      case 3:
-         break;
-      case 4:
-         break;
-      case 5:
-         break;
+2. En el fichero objetos.cc, añadimos el método que nos hace falta para generar el objeto3D por revolución. Tendremos el que realiza la revolución en función del eje Y, pudiendose cambiar el eje de rotación utilizando cualquiera de los métodos destinados a generar la rotación en función del eje que queramos en ese momento. Dada nuestra implementación de la clase que modela los objetos, debemos añadir tres métodos adicionales para que conviertan los valores de los vértices, triángulos y lados a nuestros vectores de la clase Objeto3D.
+
+3. En el fichero objetos.cc también añadimos el método necesario para cargar la información de un fichero ply a nuestro objeto de la clase objeto3D.
+
+Los modos de visualización se mantienen.
